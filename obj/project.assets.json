@@ -8,19 +8,19 @@
     ".NETCoreApp,Version=v3.1": []
   },
   "packageFolders": {
-    "C:\\Users\\Brennen\\.nuget\\packages\\": {}
+    "C:\\Users\\Billy Blackman\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Brennen\\workspace\\csharp\\exercises\\bankHeist\\bankHeist.csproj",
+      "projectUniqueName": "C:\\Users\\Billy Blackman\\Documents\\Workspace\\Team-4-Plan-YourHeist\\bankHeist.csproj",
       "projectName": "bankHeist",
-      "projectPath": "C:\\Users\\Brennen\\workspace\\csharp\\exercises\\bankHeist\\bankHeist.csproj",
-      "packagesPath": "C:\\Users\\Brennen\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Brennen\\workspace\\csharp\\exercises\\bankHeist\\obj\\",
+      "projectPath": "C:\\Users\\Billy Blackman\\Documents\\Workspace\\Team-4-Plan-YourHeist\\bankHeist.csproj",
+      "packagesPath": "C:\\Users\\Billy Blackman\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\Billy Blackman\\Documents\\Workspace\\Team-4-Plan-YourHeist\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "C:\\Users\\Brennen\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\Billy Blackman\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
