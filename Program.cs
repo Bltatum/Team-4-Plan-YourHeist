@@ -6,10 +6,8 @@ namespace bankHeist
     class Program
     {
         static void Main(string[] args)
-        {   
-            Random rnd = new Random();
-            int LuckValue = rnd.Next(-10, 11);
-            int bankDifficulty = LuckValue + 100;
+        {
+
             List<TeamMember> TeamMemberList = new List<TeamMember>();
 
             Console.WriteLine("Plan your Heist!!");
@@ -44,9 +42,16 @@ namespace bankHeist
                 newMember.GetMemberDetails();
                 TeamMemberCount--;
             }
+            Console.Write("How many Trail runs would you  like?  ");
+            int trailRuns = Convert.ToInt32(Console.ReadLine());
 
-            if (TeamMemberCount == 0)
+
+            while (TeamMemberCount == 0 && trailRuns > 0)
             {
+                Random rnd = new Random();
+                int LuckValue = rnd.Next(-10, 11);
+                int bankDifficulty = LuckValue + 100;
+
                 Console.WriteLine($"You have {TeamMemberList.Count} members on your team");
                 int skillMemberSum = 0;
                 foreach (TeamMember member in TeamMemberList)
@@ -55,17 +60,22 @@ namespace bankHeist
                 }
                 if (skillMemberSum >= bankDifficulty)
                 {
+                    Console.WriteLine("---------------------");
                     Console.WriteLine("SkillLevel- " + skillMemberSum);
                     Console.WriteLine("DifficultyLevel- " + bankDifficulty);
                     Console.WriteLine("Success!");
+                    Console.WriteLine("---------------------");
                 }
                 else
                 {
+                    Console.WriteLine("---------------------");
                     Console.WriteLine("SkillLevel- " + skillMemberSum);
                     Console.WriteLine("DifficultyLevel- " + bankDifficulty);
                     Console.WriteLine("Fail!");
+                    Console.WriteLine("---------------------");
 
                 }
+                trailRuns--;
             }
 
         }
