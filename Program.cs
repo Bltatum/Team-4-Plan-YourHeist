@@ -7,7 +7,7 @@ namespace bankHeist
     {
         static void Main(string[] args)
         {
-
+            int bankDifficulty = 100;
             List<TeamMember> TeamMemberList = new List<TeamMember>();
 
             Console.WriteLine("Plan your Heist!!");
@@ -25,7 +25,7 @@ namespace bankHeist
                     break;
                 }
 
-                Console.Write("Enter Team Member skill level 1- 10: ");
+                Console.Write("Enter Team Member skill level 1 - 50: ");
                 int TeamMemberSkillLevel = int.Parse(Console.ReadLine());
 
                 Console.Write("Enter Team Member Courage Level 0.0 - 2.0: ");
@@ -46,10 +46,19 @@ namespace bankHeist
             if (TeamMemberCount == 0)
             {
                 Console.WriteLine($"You have {TeamMemberList.Count} members on your team");
-
+                int skillMemberSum = 0;
                 foreach (TeamMember member in TeamMemberList)
                 {
-                    member.GetMemberDetails();
+                    skillMemberSum += member.SkillLevel;
+                }
+                if (skillMemberSum >= bankDifficulty)
+                {
+                    Console.WriteLine("Success!");
+                }
+                else
+                {
+                    Console.WriteLine("Fail!");
+
                 }
             }
 
