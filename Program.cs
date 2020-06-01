@@ -6,8 +6,10 @@ namespace bankHeist
     class Program
     {
         static void Main(string[] args)
-        {
-            int bankDifficulty = 100;
+        {   
+            Random rnd = new Random();
+            int LuckValue = rnd.Next(-10, 11);
+            int bankDifficulty = LuckValue + 100;
             List<TeamMember> TeamMemberList = new List<TeamMember>();
 
             Console.WriteLine("Plan your Heist!!");
@@ -53,10 +55,14 @@ namespace bankHeist
                 }
                 if (skillMemberSum >= bankDifficulty)
                 {
+                    Console.WriteLine("SkillLevel- " + skillMemberSum);
+                    Console.WriteLine("DifficultyLevel- " + bankDifficulty);
                     Console.WriteLine("Success!");
                 }
                 else
                 {
+                    Console.WriteLine("SkillLevel- " + skillMemberSum);
+                    Console.WriteLine("DifficultyLevel- " + bankDifficulty);
                     Console.WriteLine("Fail!");
 
                 }
